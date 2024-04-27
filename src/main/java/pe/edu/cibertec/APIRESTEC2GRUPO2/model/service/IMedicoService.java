@@ -8,5 +8,5 @@ import java.util.List;
 public interface IMedicoService {
 
     Medico registrarMedico(MedicoRequestDto medicoRequestDto);
-
+    List<Medico> listarMedicos();
 }

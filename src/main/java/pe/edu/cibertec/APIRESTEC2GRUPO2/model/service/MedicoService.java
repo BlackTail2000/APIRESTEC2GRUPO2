@@ -10,6 +10,8 @@ import pe.edu.cibertec.APIRESTEC2GRUPO2.model.dto.EspecialidadRequestDto;
 import pe.edu.cibertec.APIRESTEC2GRUPO2.model.dto.MedicoRequestDto;
 import pe.edu.cibertec.APIRESTEC2GRUPO2.model.repository.MedicoRepository;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class MedicoService implements IMedicoService {
@@ -35,5 +37,10 @@ public class MedicoService implements IMedicoService {
             iEspecialidadService.registrarEspecialidad(especialidad);
         }
         return nuevoMedico;
+    }
+
+    @Override
+    public List<Medico> listarMedicos() {
+        return medicoRepository.findAll();
     }
 }
